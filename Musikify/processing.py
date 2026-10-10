@@ -141,3 +141,29 @@ class KoleksiMusik:
                 self.daftar_lagu.append(lagu)
                 berhasil += 1
         return berhasil
+
+# Blok pengujian lokal - hanya jalan jika file dieksekusi langsung
+if __name__ == '__main__':
+    print("=== Pengujian Lokal processing.py ===\n")
+    koleksi = KoleksiMusik()
+
+    # Test **kwargs
+    koleksi.buat_record_lagu(judul="Bohemian Rhapsody", artis="Queen",
+                             genre="Rock", durasi=354, tahun=1975)
+    koleksi.buat_record_lagu(judul="Shape of You", artis="Ed Sheeran",
+                             genre="Pop", durasi=234, tahun=2017)
+
+    # Test *args
+    l1 = Lagu("Blinding Lights", "The Weeknd", "Pop", 200, 2020)
+    l2 = Lagu("Hotel California", "Eagles", "Rock", 391, 1977)
+    koleksi.tambah_banyak_lagu(l1, l2)
+
+    for lagu in koleksi.daftar_lagu:
+        print(f"  {lagu.info_lengkap()}")
+
+    # Test keyword argument + lambda (sorted)
+    print("\nUrut by durasi:")
+    for l in koleksi.urutkan_lagu(berdasarkan="durasi"):
+        print(f"  {l.judul} ({l.durasi}d)")
+
+    print("\n[OK] Pengujian lokal selesai!")
