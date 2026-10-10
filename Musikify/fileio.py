@@ -1,3 +1,9 @@
+# ============================================================
+# fileio.py - Modul File Input/Output
+# Menangani semua operasi file dengan 4 mode: 'x', 'a', 'r', 'w'
+# Semua operasi menggunakan with open() (context manager)
+# ============================================================
+
 NAMA_FILE_DATA = "data_musik.txt"
 NAMA_FILE_LAPORAN = "laporan_musik.txt"
 HEADER_FILE = "judul|artis|genre|durasi|tahun"
