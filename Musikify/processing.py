@@ -131,3 +131,13 @@ class KoleksiMusik:
 
         lap += "\n" + "=" * 50 + "\n"
         return lap
+
+    # Muat data dari list baris file ke koleksi
+    def muat_dari_baris(self, daftar_baris):
+        berhasil = 0
+        for baris in daftar_baris:
+            lagu = Lagu.from_line(baris)
+            if lagu:
+                self.daftar_lagu.append(lagu)
+                berhasil += 1
+        return berhasil
