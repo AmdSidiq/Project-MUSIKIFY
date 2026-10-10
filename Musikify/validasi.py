@@ -1,0 +1,11 @@
+# Validasi durasi lagu (detik), raise ValueError jika tidak valid
+def validasi_durasi(durasi_str):
+    try:
+        durasi = int(durasi_str)
+    except ValueError:
+        raise ValueError(f"Durasi '{durasi_str}' bukan angka yang valid.")
+    if durasi <= 0:
+        raise ValueError(f"Durasi harus lebih dari 0 detik, diberikan: {durasi}")
+    if durasi > 3600:
+        raise ValueError(f"Durasi maks 3600 detik, diberikan: {durasi}")
+    return durasi
