@@ -99,3 +99,35 @@ class KoleksiMusik:
     def filter_by_genre(self, genre):
         return list(filter(lambda l: l.genre.lower() == genre.lower(),
                            self.daftar_lagu))
+
+    # Generate string laporan lengkap koleksi
+    def generate_laporan(self):
+        if not self.daftar_lagu:
+            return "Koleksi kosong.\n"
+
+        lap = "=" * 50 + "\n"
+        lap += "      LAPORAN KOLEKSI MUSIK - MUSIKIFY\n"
+        lap += "=" * 50 + "\n\n"
+
+        # Statistik umum
+        total = self.hitung_total_durasi()
+        rata2 = self.rata_rata_durasi()
+        genre_pop = max(self.lagu_per_genre().items(), key=lambda x: x[1])
+
+        lap += f"Total Lagu      : {len(self.daftar_lagu)}\n"
+        lap += f"Total Durasi    : {total // 60}m {total % 60}d\n"
+        lap += f"Rata-rata       : {int(rata2) // 60}:{int(rata2) % 60:02d}\n"
+        lap += f"Genre Terpopuler: {genre_pop[0]} ({genre_pop[1]} lagu)\n\n"
+
+        # Distribusi genre
+        lap += "DISTRIBUSI GENRE\n" + "-" * 30 + "\n"
+        for genre, jumlah in sorted(self.lagu_per_genre().items()):
+            lap += f"  {genre:<12}: {'#' * jumlah} ({jumlah})\n"
+
+        # Daftar lagu
+        lap += "\nDAFTAR LAGU\n" + "-" * 30 + "\n"
+        for i, l in enumerate(sorted(self.daftar_lagu, key=lambda x: x.judul.lower()), 1):
+            lap += f"  {i}. {l.info_lengkap()}\n"
+
+        lap += "\n" + "=" * 50 + "\n"
+        return lap
