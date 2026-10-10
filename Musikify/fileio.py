@@ -18,3 +18,16 @@ def tambah_lagu(nama_file, baris_data):
     with open(nama_file, 'a') as file:
         file.write(baris_data + "\n")
     print(f"Lagu berhasil ditambahkan!")
+
+# Mode 'r' - membaca semua data secara iteratif, tangani FileNotFoundError
+def baca_semua_lagu(nama_file=NAMA_FILE_DATA):
+    daftar_baris = []
+    try:
+        with open(nama_file, 'r') as file:
+            for baris in file:  # pembacaan iteratif baris per baris
+                baris_bersih = baris.strip()
+                if baris_bersih and not baris_bersih.startswith("judul"):
+                    daftar_baris.append(baris_bersih)
+    except FileNotFoundError:
+        print(f"File '{nama_file}' belum ada. Tambah lagu dulu.")
+    return daftar_baris
