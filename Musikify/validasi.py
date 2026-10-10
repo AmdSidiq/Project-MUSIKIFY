@@ -25,3 +25,26 @@ def validasi_teks(teks, nama_field):
     if not teks or not teks.strip():
         raise ValueError(f"Field '{nama_field}' tidak boleh kosong!")
     return teks.strip()
+
+# Parsing dan validasi satu baris data file (format: judul|artis|genre|durasi|tahun)
+# Mengembalikan dict jika valid, None jika baris rusak (skip, tidak crash)
+def validasi_baris_data(baris):
+    try:
+        baris = baris.strip()
+        if not baris or baris.startswith("judul"):
+            return None
+        bagian = baris.split("|")
+        if len(bagian) != 5:
+            print(f"Baris dilewati (field tidak lengkap): {baris}")
+            return None
+        judul, artis, genre, durasi_str, tahun_str = bagian
+        return {
+            "judul": validasi_teks(judul, "judul"),
+            "artis": validasi_teks(artis, "artis"),
+            "genre": validasi_teks(genre, "genre"),
+            "durasi": validasi_durasi(durasi_str.strip()),
+            "tahun": validasi_tahun(tahun_str.strip())
+        }
+    except (ValueError, IndexError) as e:
+        print(f"Baris dilewati ({e}): {baris}")
+        return None
