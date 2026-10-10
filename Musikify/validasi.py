@@ -48,3 +48,15 @@ def validasi_baris_data(baris):
     except (ValueError, IndexError) as e:
         print(f"Baris dilewati ({e}): {baris}")
         return None
+
+# Validasi pilihan menu, return -1 jika tidak valid
+def validasi_pilihan_menu(pilihan_str):
+    try:
+        pilihan = int(pilihan_str)
+        if pilihan < 0 or pilihan > 7:
+            print(f"Pilihan tidak valid")
+            return -1
+        return pilihan
+    except ValueError:
+        print(f"Pilihan '{pilihan_str}' bukan angka valid.")
+        return -1
