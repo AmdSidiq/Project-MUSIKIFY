@@ -19,3 +19,9 @@ def validasi_tahun(tahun_str):
     if tahun < 1900 or tahun > 2030:
         raise ValueError(f"Tahun harus 1900-2030, diberikan: {tahun}")
     return tahun
+
+# Validasi teks tidak boleh kosong, raise ValueError jika kosong
+def validasi_teks(teks, nama_field):
+    if not teks or not teks.strip():
+        raise ValueError(f"Field '{nama_field}' tidak boleh kosong!")
+    return teks.strip()
