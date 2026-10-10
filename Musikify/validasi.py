@@ -1,3 +1,8 @@
+# ============================================================
+# validasi.py - Modul Validasi Input dan Data
+# Berisi fungsi untuk memvalidasi input user dan data file
+# ============================================================
+
 # Validasi durasi lagu (detik), raise ValueError jika tidak valid
 def validasi_durasi(durasi_str):
     try:
