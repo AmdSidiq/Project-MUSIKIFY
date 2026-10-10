@@ -31,3 +31,9 @@ def baca_semua_lagu(nama_file=NAMA_FILE_DATA):
     except FileNotFoundError:
         print(f"File '{nama_file}' belum ada. Tambah lagu dulu.")
     return daftar_baris
+
+# Mode 'w' - menulis laporan (overwrite file lama)
+def tulis_laporan(nama_file, konten):
+    with open(nama_file, 'w') as file:
+        file.write(konten)
+    print(f"File '{nama_file}' berhasil ditulis!")
