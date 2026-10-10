@@ -12,3 +12,9 @@ def inisialisasi_file(nama_file=NAMA_FILE_DATA):
         return True
     except FileExistsError:
         return False 
+
+# Mode 'a' - menambah data lagu baru di akhir file
+def tambah_lagu(nama_file, baris_data):
+    with open(nama_file, 'a') as file:
+        file.write(baris_data + "\n")
+    print(f"Lagu berhasil ditambahkan!")
