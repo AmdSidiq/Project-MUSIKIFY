@@ -1,3 +1,9 @@
+# ============================================================
+# processing.py - Modul Pengolahan Data Musik
+# Berisi 2 class (Lagu, KoleksiMusik) untuk mengolah data
+# Mengimplementasikan *args, **kwargs, dan lambda
+# ============================================================
+
 from musikify.validasi import validasi_baris_data
 
 class Lagu:
