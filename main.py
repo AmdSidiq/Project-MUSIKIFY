@@ -105,8 +105,8 @@ def menu_filter(koleksi):
         print("  Koleksi kosong.")
         return
     # Tampilkan genre yang ada
-    for genre, jml in sorted(koleksi.lagu_per_genre().items()):
-        print(f"  - {genre} ({jml})")
+    for genre, jumlah in sorted(koleksi.lagu_per_genre().items()):
+        print(f"  - {genre} ({jumlah})")
     genre = input("  Genre: ").strip()
     if not genre:
         return
@@ -131,8 +131,8 @@ def menu_statistik_laporan(koleksi):
     print(f"  Total Lagu    : {len(koleksi.daftar_lagu)}")
     print(f"  Total Durasi  : {total // 60}m {total % 60}d")
     print(f"  Rata-rata     : {int(rata2) // 60}:{int(rata2) % 60:02d}")
-    for genre, jml in sorted(koleksi.lagu_per_genre().items()):
-        print(f"  {genre:<12}: {'#' * jml} ({jml})")
+    for genre, jumlah in sorted(koleksi.lagu_per_genre().items()):
+        print(f"  {genre:<12}: {'#' * jumlah} ({jumlah})")
 
     # Generate dan tulis laporan ke file (mode 'w')
     laporan = koleksi.generate_laporan()

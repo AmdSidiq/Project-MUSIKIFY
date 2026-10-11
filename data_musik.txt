@@ -1,0 +1,17 @@
+judul|artis|genre|durasi|tahun
+Empat Mata|D'Bagindas|Pop|237|2010
+Blinding Lights|The Weeknd|Synth-pop|200|2019
+Shape of You|Ed Sheeran|Pop|234|2017
+Night Changes|One Direction|Pop|226|2014
+Perfect|Ed Sheeran|Pop|263|2017
+Cruel Summer|Taylor Swift|Pop|178|2019
+Numb|Linkin Park|Rock|185|2003
+In the End|Linkin Park|Rock|216|2000
+Bohemian Rhapsody|Queen|Rock|354|1975
+Hati-Hati di Jalan|Tulus|Pop Indonesia|243|2022
+Sial|Mahalini|Pop Indonesia|241|2023
+Komang|Raim Laode|Pop Indonesia|217|2022
+Laskar Pelangi|Nidji|Pop Rock|254|2008
+Interstellar Main Theme|Hans Zimmer|Soundtrack|210|2014
+Merry Go Round of Life|Joe Hisaishi|Soundtrack|305|2004
+Sweden|C418|Ambient|216|2011

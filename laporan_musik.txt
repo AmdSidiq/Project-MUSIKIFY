@@ -1,0 +1,39 @@
+==================================================
+      LAPORAN KOLEKSI MUSIK - MUSIKIFY
+==================================================
+
+Total Lagu      : 16
+Total Durasi    : 62m 59d
+Rata-rata       : 3:56
+Genre Terpopuler: Pop (5 lagu)
+
+DISTRIBUSI GENRE
+------------------------------
+  Ambient     : # (1)
+  Pop         : ##### (5)
+  Pop Indonesia: ### (3)
+  Pop Rock    : # (1)
+  Rock        : ### (3)
+  Soundtrack  : ## (2)
+  Synth-pop   : # (1)
+
+DAFTAR LAGU
+------------------------------
+  1. Blinding Lights - The Weeknd [Synth-pop] (3:20) (2019)
+  2. Bohemian Rhapsody - Queen [Rock] (5:54) (1975)
+  3. Cruel Summer - Taylor Swift [Pop] (2:58) (2019)
+  4. Empat Mata - D'Bagindas [Pop] (3:57) (2010)
+  5. Hati-Hati di Jalan - Tulus [Pop Indonesia] (4:03) (2022)
+  6. In the End - Linkin Park [Rock] (3:36) (2000)
+  7. Interstellar Main Theme - Hans Zimmer [Soundtrack] (3:30) (2014)
+  8. Komang - Raim Laode [Pop Indonesia] (3:37) (2022)
+  9. Laskar Pelangi - Nidji [Pop Rock] (4:14) (2008)
+  10. Merry Go Round of Life - Joe Hisaishi [Soundtrack] (5:05) (2004)
+  11. Night Changes - One Direction [Pop] (3:46) (2014)
+  12. Numb - Linkin Park [Rock] (3:05) (2003)
+  13. Perfect - Ed Sheeran [Pop] (4:23) (2017)
+  14. Shape of You - Ed Sheeran [Pop] (3:54) (2017)
+  15. Sial - Mahalini [Pop Indonesia] (4:01) (2023)
+  16. Sweden - C418 [Ambient] (3:36) (2011)
+
+==================================================
